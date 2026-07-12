@@ -1,0 +1,22 @@
+.books-container {
+  padding: 30px;
+}
+.book-card {
+ border: 1px solid #ddd;
+ padding: 20px;
+ margin-bottom: 15px;
+ border-radius: 8px;
+ background-color: #f9fafb;
+}
+button {
+ padding: 10px 15px;
+ background-color: #7c3aed;
+ color: white;
+ border: none;
+ cursor: pointer;
+}
+button:disabled {
+ background-color: gray;
+ cursor: not-allowed;
+    
+}

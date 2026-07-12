@@ -1,0 +1,12 @@
+<div class="container">
+ <h2>Register</h2>
+<input type="text" placeholder="Name" [(ngModel)]="name" />
+<input type="email" placeholder="Email" [(ngModel)]="email" />
+<input type="password" placeholder="Password" [(ngModel)]="password" />
+<select [(ngModel)]="role">
+  <option value="user">User</option>
+  <option value="admin">Admin</option>  
+ </select>
+<button (click)="registerUser()">Register</button>
+<p>{{ message }}</p>
+</div>

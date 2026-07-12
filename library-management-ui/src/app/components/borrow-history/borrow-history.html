@@ -1,0 +1,33 @@
+<div class="history-container">
+ <h2>Borrow History</h2>
+<p>{{ message }}</p>
+<table *ngIf="records.length > 0">
+   <thead>
+    <tr>
+      <th>Book</th>
+      <th>Author</th>
+      <th>Status</th>
+      <th>Borrow Date</th>
+      <th>Due Date</th>
+      <th>Return</th>
+    </tr>
+   </thead>
+ <tbody>
+    <tr *ngFor="let record of records">
+      <td>{{ record.bookId?.title }}</td>
+      <td>{{ record.bookId?.author }}</td>
+      <td>{{ record.status }}</td>
+      <td>{{ record.borrowDate | date }}</td>
+      <td>{{ record.dueDate | date }}</td>
+      <td>
+       <button
+        *ngIf="record.status !== 'returned'"
+        (click)="returnBook(record._id)"
+      >
+      Return
+      </button>
+      </td>
+    </tr>
+  </tbody>
+ </table>   
+</div>

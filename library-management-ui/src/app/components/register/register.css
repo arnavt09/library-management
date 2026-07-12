@@ -1,0 +1,20 @@
+.container {
+    width: 350px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+input,
+select {
+padding: 10px;
+margin-bottom: 12px;
+}
+button {
+ width: 100px;
+ padding: 10px;
+ background-color: #16a34a;
+ color: white;
+ border: none;
+ cursor: pointer;
+}

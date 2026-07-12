@@ -1,0 +1,17 @@
+<div class="books-container">
+ <h2>Available Books</h2>
+<p>{{message }}</p>
+<div class="book-card" *ngFor="let book of books">
+  <h3>{{ book.title }}</h3>
+<p><strong>Author:</strong>{{book.author }}</p>
+  <p><strong>ISBN:</strong>{{ book.isbn }}</p>
+  <p><strong>Total Copies:</strong> {{ book.totalCopies }}</p>
+  <p><strong>Available Copies:</strong> {{book.availableCopies }}</p>
+<button
+   [disabled]="book.availableCopies <= 0"
+   (click)="borrowBook(book._id)"
+   >
+    Borrow Book
+  </button>
+ </div>
+</div>
